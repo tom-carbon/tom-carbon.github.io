@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tom Carbon — Expedition Nordakar</title>
+
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --text: #1f1f1f;
+      --muted: #6b6b6b;
+      --accent: #c94a2f; /* subtle warming-stripe highlight */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      background: url("hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero {
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0)
+      );
+      padding: 3rem;
+      width: 100%;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .hero p {
+      max-width: 520px;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #eaeaea;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .stripe {
+      height: 4px;
+      width: 120px;
+      background: linear-gradient(
+        90deg,
+        #2c7bb6,
+        #abd9e9,
+        #ffffbf,
+        #fdae61,
+        #d7191c
+      );
+      margin: 1.5rem 0;
+    }
+
+    .links a {
+      display: block;
+      margin: 0.75rem 0;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.25rem;
+    }
+
+    .links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <h1>Tom Carbon</h1>
+    <p>
+      Expedition Nordakar — cycling from Nordkapp to Dakar,
+      collecting human stories about climate, travel,
+      and sustainable ways of living.
+    </p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>The journey</h2>
+    <div class="stripe"></div>
+    <p>
+      Nordakar is a long-distance bicycle expedition from the
+      northernmost point of Europe to West Africa.
+      Moving slowly, listening carefully, and sharing
+      small, hopeful stories along the way.
+    </p>
+  </section>
+
+  <section>
+    <h2>Follow the expedition</h2>
+    <div class="stripe"></div>
+    <div class="links">
+      <a href="https://notion.site/YOUR-NOTION-JOURNEY-PAGE"
+         target="_blank" rel="noopener">
+        → Read the stories (Notion)
+      </a>
+
+      <a href="https://www.instagram.com/YOURPROFILE"
+         target="_blank" rel="noopener">
+        → Daily updates on Instagram
+      </a>
+
+      <a href="https://www.youtube.com/YOURCHANNEL"
+         target="_blank" rel="noopener">
+        → Films & longer stories on YouTube
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © Tom Carbon — Slow travel by bicycle
+</footer>
+
+</body>
+</html>
