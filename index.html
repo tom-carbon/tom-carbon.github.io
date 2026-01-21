@@ -35,36 +35,74 @@
       color: inherit;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
+
     header {
+      position: sticky;
+      top: 0;
+      background: var(--bg-light);
+      z-index: 100;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .header-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 32px 56px;
+      justify-content: space-between;
+      padding: 24px 56px;
+      max-width: 1280px;
+      margin: 0 auto;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-weight: 500;
+      font-size: 15px;
+    }
+
+    .logo-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot.cold { background: #4FA3D1; }
+    .dot.warm { background: #D96C4A; }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
     }
 
     nav a {
-      margin: 0 16px;
       font-size: 14px;
       color: var(--text-muted);
     }
 
-    .cta {
-      background: var(--accent);
-      color: white;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 14px;
+    .social {
+      display: flex;
+      gap: 16px;
+      font-size: 16px;
     }
 
-    /* Hero */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -77,28 +115,29 @@
       font-family: 'Playfair Display', serif;
       font-size: 56px;
       line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-tagline {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-muted);
       margin-bottom: 24px;
     }
 
-    .hero p {
+    .hero-description {
       color: var(--text-muted);
-      max-width: 420px;
+      max-width: 460px;
     }
 
-    .hero-buttons {
-      margin-top: 32px;
-      display: flex;
-      gap: 16px;
+    .hero-visual {
+      background: #E0D7CB;
+      border-radius: 28px;
+      aspect-ratio: 4 / 3;
     }
 
-    .btn-secondary {
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.05);
-      font-size: 14px;
-    }
+    /* ================= CARDS ================= */
 
-    /* Cards */
     .cards {
       padding: 40px 56px 80px;
     }
@@ -130,7 +169,8 @@
       aspect-ratio: 1 / 1;
     }
 
-    /* Footer */
+    /* ================= FOOTER ================= */
+
     footer {
       background: var(--bg-dark);
       color: white;
@@ -169,15 +209,43 @@
       cursor: pointer;
     }
 
+    /* ================= RESPONSIVE ================= */
+
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
       }
+
       .card-grid {
         grid-template-columns: 1fr 1fr;
       }
+
       .footer-grid {
         grid-template-columns: 1fr;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-light);
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px;
+        display: none;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .social {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
       }
     }
   </style>
@@ -186,24 +254,37 @@
 <body>
 
 <header>
-  <div class="logo">
-    ✦ Tom Carbon
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-dots">
+        <span class="dot cold"></span>
+        <span class="dot warm"></span>
+      </div>
+      Tom Carbon
+    </div>
+
+    <nav id="mainNav">
+      <a href="#journeys">Journeys</a>
+      <a href="https://your-notion-link" target="_blank">Stories</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="social">
+      <a href="https://instagram.com">📷</a>
+      <a href="https://youtube.com">▶</a>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </div>
-  <nav>
-    <a href="#">Journeys</a>
-    <a href="#">Stories</a>
-    <a href="#">About</a>
-    <a href="#" class="cta">Start reading</a>
-  </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="journeys">
   <div class="hero-content">
     <h1>Expedition Nordakar</h1>
 
-    <h2 class="hero-tagline">
+    <div class="hero-tagline">
       A long-distance bicycle journey across the continent.
-    </h2>
+    </div>
 
     <p class="hero-description">
       I’m Tom Carbon. I’m cycling from the Arctic to West Africa, collecting small stories
@@ -227,7 +308,7 @@
   </div>
 </section>
 
-<footer>
+<footer id="about">
   <div class="footer-grid">
     <div>
       <strong>TOM CARBON</strong>
@@ -254,6 +335,12 @@
     </div>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("open");
+  }
+</script>
 
 </body>
 </html>
