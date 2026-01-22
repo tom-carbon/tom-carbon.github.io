@@ -45,11 +45,14 @@
       display: inline-block;
       transform: translateY(-2px);
     }
+    
     .section-opener {
       display: flex;
       align-items: center;
+      justify-content: center; 
       gap: 12px;
       margin-bottom: 32px;
+      text-align: center;
     }
 
     .section-opener h2 {
@@ -272,18 +275,44 @@
       color: rgba(255,255,255,0.7);
       font-size: 14px;
     }
+    footer strong {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: white;
+    }
 
+    footer a {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.3);
+      text-underline-offset: 3px;
+    }
+
+    footer a {
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    footer a:hover {
+      color: white;
+      text-decoration-color: white;
+    }
+    
     .footer-brand {
       display: flex;
-      align-items: center;
+      align-items: flex-start; /* align to top of text */
       gap: 14px;
     }
 
     .footer-logo {
       width: 40px;
       height: auto;
+      margin-top: 2px; /* fine-tune to align with TOM CARBON */
       opacity: 0.9;
     }
+
 
     .subscribe input {
       flex: 1;
