@@ -40,11 +40,31 @@
     }
 
     .wave {
-  margin-left: 8px;
-  font-size: 0.9em;
-  display: inline-block;
-  transform: translateY(-2px);
-}
+      margin-left: 8px;
+      font-size: 0.9em;
+      display: inline-block;
+      transform: translateY(-2px);
+    }
+    .section-opener {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .section-opener h2 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .section-logo {
+      height: 14px;
+      width: auto;
+      opacity: 0.7;
+    }
 
 
     /* ================= HEADER ================= */
@@ -253,9 +273,16 @@
       font-size: 14px;
     }
 
-    .subscribe {
+    .footer-brand {
       display: flex;
-      margin-top: 16px;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-logo {
+      width: 40px;
+      height: auto;
+      opacity: 0.9;
     }
 
     .subscribe input {
@@ -381,11 +408,12 @@
 
 <section class="cards" id="journeys">
 
-  <!-- Section opener -->
-  <h2>
-  <img src="/logo/logo-16.png" alt="" aria-hidden="true">
-  CURRENT JOURNEY
-</h2>
+ <!-- Section opener -->
+<div class="section-opener">
+  <img src="/logo/logo-16.png" alt="" aria-hidden="true" class="section-logo">
+  <h2>CURRENT JOURNEY</h2>
+</div>
+
   <h3>Expedition Nordakar</h3>
 
   <!-- Journey concept block -->
@@ -464,36 +492,40 @@
 
 <footer>
   <div class="footer-grid">
-    <div>
-      <img src="/logo/logo-40.png" alt="Tom Carbon logo" style="margin-bottom: 16px;">
-      <strong>TOM CARBON</strong>
-      <p>Follow along via Substack or Instagram.</p>
+
+    <!-- Brand block -->
+    <div class="footer-brand">
+      <img src="/logo/logo-40.png" alt="Tom Carbon logo" class="footer-logo">
+      <div>
+        <strong>TOM CARBON</strong>
+        <p>Follow along via Substack or Instagram.</p>
       </div>
     </div>
 
+    <!-- Explore -->
     <div>
       <strong>Explore</strong><br/>
       <a href="https://substack.com/@tomcarbon" target="_blank" rel="noopener">Stories</a><br/>
-      <a href="#journeys">Journeys</a>
-      <a href="https://www.instagram.com/tomcarbon_" target="_blank" rel="noopener">Photos</a><br/>
-      <a>Map</a>
-  
+      <a href="#journeys">Journeys</a><br/>
+      <a href="https://www.instagram.com/tomcarbon_" target="_blank" rel="noopener">Photos</a>
     </div>
 
+    <!-- Info -->
     <div>
       <strong>Info</strong><br/>
-      <a href="#about">About</a>
-      <a>Contact</a><br/>
-      
+      <a href="#about">About</a><br/>
+      <span style="opacity:0.5;">Contact</span>
     </div>
 
+    <!-- Connect -->
     <div>
-  <strong>Connect</strong><br/>
-  <a href="https://substack.com/@tomcarbon" target="_blank" rel="noopener">Substack</a><br/>
-  <a href="https://www.instagram.com/tomcarbon_" target="_blank" rel="noopener">Instagram</a><br/>
-  <a href="https://www.youtube.com/@cyclingthom" target="_blank" rel="noopener">YouTube</a>
-</div>
+      <strong>Connect</strong><br/>
+      <a href="https://substack.com/@tomcarbon" target="_blank" rel="noopener">Substack</a><br/>
+      <a href="https://www.instagram.com/tomcarbon_" target="_blank" rel="noopener">Instagram</a><br/>
+      <a href="https://www.youtube.com/@cyclingthom" target="_blank" rel="noopener">YouTube</a>
+    </div>
 
+  </div>
 </footer>
 
 <script>
