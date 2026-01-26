@@ -11,6 +11,8 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+
 
   <style>
     :root {
@@ -162,6 +164,12 @@
       padding: 80px 56px;
       align-items: center;
     }
+    
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 52px;
+      font-weight: 500;
+    }
 
      .hero-title {
       font-family: 'Playfair Display', serif;
@@ -194,24 +202,24 @@
       color: var(--text-muted);
       margin-bottom: 24px;
     }
-    .intro-title {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    
+     .intro-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
 
      .intro-subtitle {
-        margin-top: 8px;
-        margin-bottom: 24px;
-
-        font-family: 'Inter', sans-serif;
-        font-size: 15px;
-        font-weight: 400;
-
-        color: var(--text-muted);
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
+      display: block;
+      margin-top: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
 
     .hero-description {
       color: var(--text-muted);
