@@ -73,6 +73,26 @@
   display: block;
 }
 
+.journey-threshold {
+  padding: 120px 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.threshold-inner {
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.threshold-text {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 16px 0;
+}
+
 
 
     /* ================= HEADER ================= */
@@ -219,7 +239,7 @@
       margin-top: 12px;
       font-family: 'Inter', sans-serif;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 500;
       color: var(--text-muted);
       letter-spacing: 0.02em;
     }
@@ -488,25 +508,30 @@
     <p class="intro-subtitle">Nice to meet you</p>
 
     <p class="hero-description">
-      I’m a slow traveler and I love to travel by bicycle. 
+     I travel slowly for food and adventure.
     </p>
       
     <p class="hero-description">  
-      The bike leaves me room to notice landscapes, outdoor lives and the small details of daily 
-      routines at exotic destinations. I’m curious about how people live with nature, how habits 
-      form culture, and how food brings people together.
+      The bicycle is my favorite way to get around. It’s just fast enough to go far, and just 
+      slow enough to really notice landscapes, outdoor lives and the small details of daily 
+      routines. I’m curious about how people live with nature, how habits shape culture, 
+      and -most of all— about local food, family recipes, and the stories people love to tell 
+      about them.
     </p>
 
     <p class="hero-description">
-      I follow that curiosity wherever it leads, even when it takes me across a continent!
+     I follow curiosity wherever it leads, even when that means crossing a continent!
     </p>
 
-    <div class="hero-buttons">
-      <a href="#about" class="btn-secondary">
-        About me
-      </a>
-    </div>
-  </div>
+<div class="hero-buttons">
+  <a href="#journeys" class="cta">
+    Journeys
+  </a>
+
+  <a href="#about" class="btn-secondary">
+    About me
+  </a>
+</div>
 
   <div class="hero-visual">
   <img
@@ -548,7 +573,8 @@
       
       <p class="hero-description">
        The journey is guided by two long-held ambitions: crossing a continent under my own power, and 
-       experiencing Africa at the same pace I experience Europe: slowly, attentively, and close to the ground.
+       experiencing Africa at the same pace I experience Europe: slowly and attentively, embracing the 
+       local beauty close to the ground.
       </p>
 
       <p class="hero-description">
@@ -567,12 +593,25 @@
     <div class="hero-content">
       <span class="hero-eyebrow">On the road</span>
 
-      <h1 class="hero-title">Food, habits, hope</h1>
+      <h1 class="hero-title">The Stages</h1>
 
       <p class="hero-description">
-        Along the road, I collect small stories: shared meals, daily routines,
-        and simple ideas that offer a sense of togetherness and hope
-        in a changing climate.
+        The journey unfolds in stages: from the Nordic North, through the forests of the Baltics and 
+        Eastern Poland, into the mountains and cultures of the Balkans.
+      </p>
+      <p class="hero-description">
+        The road then curves along the Mediterranean and climbs across the Atlas Mountains.
+      </p>
+      <section class="journey-threshold" aria-hidden="true">
+  <div class="threshold-inner">
+    <p class="threshold-text">The journey changes here</p>
+  </div>
+</section>
+      <p class="hero-description">
+        From there, it stretches into the Sahara, on the long way to Dakar.
+      </p>
+      <p class="hero-description">
+        With every stage, the climate changes, the food evolves, and the rhythm of daily life shifts.
       </p>
     </div>
 
