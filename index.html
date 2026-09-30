@@ -144,6 +144,32 @@
       font-size: 14px;
       color: var(--text-muted);
     }
+
+    nav.main-nav a.nav-featured{
+      color: var(--accent);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    nav.main-nav a.nav-featured .live-dot{
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--accent);
+      position: relative; flex: none;
+    }
+    nav.main-nav a.nav-featured .live-dot::after{
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      background: var(--accent);
+      animation: tcPulse 2s ease-out infinite;
+    }
+    @keyframes tcPulse{
+      0% { transform: scale(1); opacity: .7; }
+      70% { transform: scale(2.6); opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      nav.main-nav a.nav-featured .live-dot::after { animation: none; }
+    }
  
     /* Social icons (desktop only) */
     .header-socials {
@@ -560,7 +586,7 @@
  
     <!-- Navigation -->
     <nav class="main-nav" id="mainNav">
-      <a href="#journey">Journey</a>
+      <a href="#journey" class="nav-featured"><span class="live-dot"></span>Journeys</a>
       <a href="#about">About</a>
       <a href="https://substack.com/@tomcarbon" target="_blank">Stories</a>
     </nav>
@@ -642,13 +668,16 @@
       </p>
  
       <p class="text">
-       For years I squeezed these adventures into short holidays; always returning just when 
-        it started to get interesting. This year I'm finally doing it differently. Ten weeks, 
-        three Nordic countries, and the question of what it actually means to be <i>Roaming Right</i>.
+       For years I squeezed these adventures into short holidays; always turning back just when 
+        it started to get interesting. This summer I finally did it differently. A hundred and one days, 
+        from the Low Countries up to the Arctic and back down to Poland, entirely by bike, train and boat; 
+        not a single flight. The question I left with was what it actually means to be <i>Roaming Right</i>. 
+        I came back with a tent that smells of woodsmoke, a notebook full of strangers' kitchens, 
+        and something close to an answer.
       </p>
  
       <div class="button-row">
-        <a href="#journey" class="cta">Journey</a>
+        <a href="#numbers" class="cta">See how it went</a>
         <a href="#about" class="btn-secondary">About me</a>
       </div>
     </div>
@@ -669,119 +698,7 @@
       <h2>Journey</h2>
     </div>
   </div>
- 
-  <div class="block-head"> 
-    <span class="hero-eyebrow">Summer 2026</span> 
-    <h1>Roaming Right</h1> 
-    <p class="hero-deck">Cycling across the Nordic summer with a tent, a table and an appetite.</p> 
-  </div>
-  
- <div class="block-body split">
- 
-  <!-- LEFT COLUMN: TEXT -->
-  <div>
-    <span class="hero-eyebrow">Where it started</span>
- 
-    <p class="text">
-      I grew up in the Netherlands, where nature is something you plan in advance and share with a 
-      few million others on the same sunny afternoon. We have bike paths, sure, and plenty of carefully 
-      maintained parks; but finding a spot where you can just sit outside without a reservation, a parking 
-      ticket or someone else's fence in the way has become something of a national talent. Our wishes are 
-      pretty simple: a bit of space, some fresh air and the occasional meal that doesn't come wrapped in 
-      plastic. And yet those basics feel increasingly like a luxury.
-    </p>
- 
-    <p class="text">
-      So when I first read about <i>allemansrätten</i>, the Nordic right to roam, something clicked. In 
-      Norway, Sweden and Finland, you can pitch your tent on someone's land without asking, pick wild berries 
-      straight from the forest and swim in a lake that doesn't belong to anyone in particular. The kind of 
-      outdoor life I'd been chasing as an exception on holidays turns out to be an ordinary Tuesday in 
-      Scandinavia. Not a lifestyle brand, not a retreat you book; just how people live. I wanted to get closer 
-      to that and food is what makes it tangible. What people grow, forage, smoke, ferment and put on the table 
-      is basically the landscape translated into a meal. 
-    </p>
-    
-    <br>
- 
-    <span class="hero-eyebrow">The Traveling Table</span>
- 
-    <p class="text">
-      I carry a small folding table on my bike. I realize that it may sound ridiculous; but the thing is, 
-      it changes everything. A table turns a random patch of grass into a place where something can happen. You 
-      set it down, put a cup of coffee on it and suddenly you're not just passing through anymore; you're 
-      somewhere.
-    </p>
- 
-    <p class="text">
-      At every stop, whatever arrives on the table becomes the story. A handful of wild blueberries a host 
-      picked that morning. A bowl of soup cooked on a campfire by someone whose name I can't pronounce but 
-      whose kitchen I'll remember for years. A cup of coffee shared with a stranger at a campspot who turns 
-      out to be cycling the same direction. Some meals I'll cook myself on a camp stove, probably badly. Most 
-      of them I'm hoping to stumble into; sitting down at someone else's table with the curiosity of a guest 
-      and the appetite of someone who's been pedalling since breakfast.
-    </p>
- 
-  </div>
- 
-  <!-- RIGHT COLUMN: IMAGE STACK -->
-  <div class="journey-media-stack">
- 
-    <div class="visual">
-      <img src="/assets/images/Downhill_Spain.jpg" alt="Cycling through nature" loading="lazy">
-    </div>
- 
-    <div class="visual">
-      <img src="/assets/images/Sunset_bay_Spain.jpg" alt="Camping in nature" loading="lazy">
-    </div>
- 
-  </div>
- 
-</div>
- 
-  <!-- ROUTE -->
-  <div class="block-head" style="margin-top: 56px;">
-    <span class="hero-eyebrow">The Route</span>
-  </div>
- 
-  <div class="block-body split">
-    <!-- LEFT COLUMN -->
-    <div>
-      <p class="text">
-        The exact route isn't fixed, and honestly, I think that's the strongest part of the plan. My idea is 
-        to start in southern Norway and gradually move north and east, crossing into Sweden and continuing into 
-        Finland; but the direction will be shaped by trails, local tips, food culture and the simple question of 
-        where it still feels right to sleep in the open and set up the table. Some of the best meals I've had on 
-        previous trips came from taking a turn I hadn't planned, and I'd like to keep that door wide open.
-      </p>
- 
-      <p class="text">
-        Will every meal be a scenic experience? Probably not. There will be rain, there will be mosquitoes and 
-        there will be evenings where dinner is instant noodles eaten in a hurry because the wind picked up. But 
-        that's fine; the table doesn't need perfect conditions to work. It just needs to be somewhere outside. 
-        And in the Nordics, "somewhere outside" tends to come with a fjord, a forest or a lake that you didn't 
-        have to pay for. The decor budget is covered, even when the rest of the plan would fall apart.
-      </p>
-      
-      <div class="button-row">
-        <a href="https://substack.com/@tomcarbon" target="_blank" class="cta">
-          Follow the journey
-        </a>
-        <a href="https://www.instagram.com/tomcarbon_" target="_blank" class="btn-secondary">
-          View the photos
-        </a>
-      </div>
-    </div>
- 
-    <!-- RIGHT COLUMN -->
-    <div class="visual">
-      <img
-        src="assets/images/Roaming_Right.jpg"
-        alt="Nordic route map"
-        loading="lazy"
-      >
-    </div>
-  </div>
- 
+
 <section class="tcn" id="numbers">
   <style>
     .tcn{
@@ -789,8 +706,6 @@
       --muted:#5c6b76; --track:rgba(14,36,51,.10); --hair:rgba(14,36,51,.12);
       background:var(--sand); color:var(--deep);
       font-family:'Inter',sans-serif;
-      margin-top:56px;
-      margin-bottom:56px;
     }
     .tcn *{box-sizing:border-box;}
     .tcn-wrap{max-width:1080px;margin:0 auto;}
@@ -979,6 +894,133 @@
   })();
   </script>
 </section>
+
+  <div class="block-head"> 
+    <span class="hero-eyebrow">Summer 2026 · Latest journey</span> 
+    <h1>Roaming Right</h1> 
+    <p class="hero-deck">A summer spent cycling across the Nordics with a tent, a table and an appetite; here is how it unfolded.</p> 
+  </div>
+  
+ <div class="block-body split">
+ 
+  <!-- LEFT COLUMN: TEXT -->
+  <div>
+    <span class="hero-eyebrow">Where it started</span>
+ 
+    <p class="text">
+      I grew up in the Netherlands, where nature is something you plan in advance and share with a 
+      few million others on the same sunny afternoon. We have bike paths, sure, and plenty of carefully 
+      maintained parks; but finding a spot where you can just sit outside without a reservation, a parking 
+      ticket or someone else's fence in the way has become something of a national talent. Our wishes are 
+      pretty simple: a bit of space, some fresh air and the occasional meal that doesn't come wrapped in 
+      plastic. And yet those basics feel increasingly like a luxury.
+    </p>
+ 
+    <p class="text">
+      So when I first read about <i>allemansrätten</i>, the Nordic right to roam, something clicked. In 
+      Norway, Sweden and Finland, you can pitch your tent on someone's land without asking, pick wild berries 
+      straight from the forest and swim in a lake that doesn't belong to anyone in particular. The kind of 
+      outdoor life I'd been chasing as an exception on holidays turned out to be an ordinary Tuesday in 
+      Scandinavia. Not a lifestyle brand, not a retreat you book; just how people live. I wanted to get closer 
+      to that, and food is what made it tangible. What people grow, forage, smoke, ferment and put on the table 
+      is the landscape translated into a meal; and for one summer, that table was mine to pull up a chair to. 
+    </p>
+    
+    <br>
+ 
+    <span class="hero-eyebrow">The Traveling Table</span>
+ 
+    <p class="text">
+      I carry a small folding table on my bike. I realize that it may sound ridiculous; but the thing is, 
+      it changes everything. A table turns a random patch of grass into a place where something can happen. You 
+      set it down, put a cup of coffee on it and suddenly you're not just passing through anymore; you're 
+      somewhere.
+    </p>
+ 
+    <p class="text">
+      At every stop, whatever arrived on the table became the story. A handful of wild blueberries a host 
+      picked that morning. A bowl of salmon soup in a market hall, eaten with bread still warm from the oven. 
+      A rye sourdough bought from a baker at a village market in Latvia, so good my partner and I still talk 
+      about it. Some meals I cooked myself on a camp stove, a few of them badly. Most I stumbled into; sitting 
+      down at someone else's table with the curiosity of a guest and the appetite of someone who'd been 
+      pedalling since breakfast.
+    </p>
+ 
+  </div>
+ 
+  <!-- RIGHT COLUMN: IMAGE STACK -->
+  <div class="journey-media-stack">
+ 
+    <div class="visual">
+      <img src="/assets/images/Downhill_Spain.jpg" alt="Cycling through nature" loading="lazy">
+    </div>
+ 
+    <div class="visual">
+      <img src="/assets/images/Sunset_bay_Spain.jpg" alt="Camping in nature" loading="lazy">
+    </div>
+ 
+  </div>
+ 
+</div>
+ 
+  <!-- ROUTE -->
+  <div class="block-head" style="margin-top: 56px;">
+    <span class="hero-eyebrow">The Route</span>
+  </div>
+ 
+  <div class="block-body split">
+    <!-- LEFT COLUMN -->
+    <div>
+      <p class="text">
+        The exact route was never fixed, and that turned out to be the strongest part of the plan. I started in 
+        the south, worked my way up through the Norwegian fjords to the Arctic, then let the direction be shaped 
+        by trails, local tips, food culture and the simple question of where it still felt right to sleep in the 
+        open and set up the table. The best days came from taking a turn I hadn't planned; a turf-roofed hut on a 
+        storm-battered coast, a monastery ruin on a near-empty Baltic island, a forest track where two moose 
+        crossed the road in the rain.
+      </p>
+ 
+      <p class="text">
+        Was every meal a scenic experience? Of course not. There was rain, there were mosquitoes, and there were 
+        evenings where dinner was instant noodles eaten in a hurry because the wind picked up. But the table never 
+        needed perfect conditions to work; it just needed to be somewhere outside. And in the Nordics, "somewhere 
+        outside" tends to come with a fjord, a forest or a lake you didn't have to pay for. The decor budget was 
+        covered, even on the evenings the rest of the plan fell apart.
+      </p>
+      
+      <div class="button-row">
+        <a href="#numbers" class="cta">
+          The journey in numbers
+        </a>
+        <a href="https://substack.com/@tomcarbon" target="_blank" class="btn-secondary">
+          Read the stories
+        </a>
+        <a href="https://www.instagram.com/tomcarbon_" target="_blank" class="btn-secondary">
+          View the photos
+        </a>
+      </div>
+    </div>
+ 
+    <!-- RIGHT COLUMN -->
+    <div class="visual">
+      <img
+        src="assets/images/Roaming_Right.jpg"
+        alt="Nordic route map"
+        loading="lazy"
+      >
+    </div>
+  </div>
+ 
+</section>
+
+<!-- =================================================================
+     THE JOURNEY IN NUMBERS  ·  Tom Carbon
+     Plak deze <section> tussen #journey en #about in index.html.
+     Variant C: sand-sectie met petrol hero-band. Eigen SVG-iconen.
+     ================================================================= -->
+
+
+
 <!-- ABOUT (STRUCTURAL PATTERN APPLIED) -->
 <section class="section" id="about">
  
