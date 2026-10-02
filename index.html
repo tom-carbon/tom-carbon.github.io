@@ -669,15 +669,14 @@
  
       <p class="text">
        For years I squeezed these adventures into short holidays; always turning back just when 
-        it started to get interesting. This summer I finally did it differently. A hundred and one days, 
-        from the Low Countries up to the Arctic and back down to Poland, entirely by bike, train and boat; 
-        not a single flight. The question I left with was what it actually means to be <i>Roaming Right</i>. 
-        I came back with a tent that smells of woodsmoke, a notebook full of strangers' kitchens, 
-        and something close to an answer.
+        it started to get interesting. In the summer of 2026 I finally did it differently. In 101 days, 
+        from the lowlands up to the Arctic and back down to Poland the <i>slow travel way</i>. The question 
+        I left with was what it actually means to be <i>Roaming Right</i>. I came back with a tent that smells 
+        of woodsmoke, a healthy dose of inspiration, and something close to an answer.
       </p>
  
       <div class="button-row">
-        <a href="#numbers" class="cta">See how it went</a>
+        <a href="#numbers" class="cta">See the Nordics journey →</a>
         <a href="#about" class="btn-secondary">About me</a>
       </div>
     </div>
@@ -691,14 +690,87 @@
  
 <!-- ================= JOURNEY ================= -->
 <section class="section" id="journey">
- 
+
   <div class="container">
     <div class="section-opener">
       <img src="/logo/logo-16.png" class="section-logo" alt="">
-      <h2>Journey</h2>
+      <h2>Journeys</h2>
     </div>
   </div>
 
+  <style>
+    /* ---- Journey / story building blocks ---- */
+    #journey .trip-head{ max-width: var(--max-width); margin: 0 auto 10px; padding: 0 var(--content-padding); }
+    #journey .trip-eyebrow{ font-family: var(--font-body); font-size: 13px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color: var(--accent); margin: 0 0 8px; display:block; }
+    #journey .wide-photo{ max-width: var(--max-width); margin: 0 auto; padding: 0 var(--content-padding); }
+    #journey .wide-photo .visual{ aspect-ratio: 21/7; border-radius: var(--radius-lg); }
+    #journey .story{ max-width: 780px; margin: 0 auto; padding: 0 var(--content-padding); }
+    #journey .story h3{ font-family: var(--font-display); font-size: 24px; font-weight: 400; line-height:1.2; letter-spacing:-.01em; margin: 44px 0 14px; color: var(--text-dark); }
+    #journey .story .text{ max-width: none; }
+    #journey .story-link{ display:inline-block; margin: 6px 0 2px; font-size: 15px; font-weight:500; color: var(--accent); border-bottom: 1px solid rgba(195,154,107,.4); padding-bottom:1px; }
+    #journey .story-link:hover{ border-bottom-color: var(--accent); }
+    /* photo blocks inside story */
+    #journey .ph-one{ margin: 22px 0 8px; }
+    #journey .ph-one .visual{ aspect-ratio: 16/9; border-radius: 16px; }
+    #journey .ph-two{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0 8px; }
+    #journey .ph-two .visual{ aspect-ratio: 4/5; border-radius: 16px; }
+    #journey .ph-side{ display:grid; grid-template-columns: 1fr 0.9fr; gap:28px; align-items:center; margin:22px 0 8px; }
+    #journey .ph-side .visual{ aspect-ratio: 3/4; border-radius: 16px; }
+    /* captions under photo blocks */
+    #journey figure{ margin:0; }
+    #journey .ph-cap{ font-family: var(--font-body); font-size:13px; line-height:1.5; color: var(--text-muted); margin:10px 2px 0; }
+    #journey .ph-two .ph-cap{ grid-column: 1 / -1; margin-top:-6px; }
+    #journey .ph-side .text{ margin:0; }
+    /* full-bleed photo breaks out of the 780px column */
+    #journey .ph-bleed{ max-width: var(--max-width); margin: 28px auto; padding: 0 var(--content-padding); }
+    #journey .ph-bleed .visual{ aspect-ratio: 21/8; border-radius: var(--radius-lg); }
+    /* Polarsteps banner */
+    #journey .ps-banner{ max-width: var(--max-width); margin: 40px auto 0; padding: 0 var(--content-padding); }
+    #journey .ps-inner{ border:1px solid rgba(14,36,51,.1); border-radius: 22px; overflow:hidden; display:grid; grid-template-columns:1.3fr 1fr; background:#fff; }
+    #journey .ps-inner .ps-map{ background:#E7DCCB; min-height:240px; }
+    #journey .ps-inner .ps-map img{ width:100%; height:100%; object-fit:cover; display:block; }
+    #journey .ps-inner .ps-body{ padding:34px; display:flex; flex-direction:column; gap:14px; justify-content:center; }
+    #journey .ps-inner .ps-body h3{ font-family:var(--font-display); font-size:22px; font-weight:400; margin:0; color:var(--text-dark); }
+    #journey .ps-inner .ps-body p{ font-size:15px; color:var(--text-muted); margin:0; }
+    #journey .ps-inner .ps-body a{ align-self:flex-start; background:var(--bg-dark); color:var(--bg-light); font-size:15px; font-weight:500; padding:12px 22px; border-radius:999px; }
+    /* socials row */
+    #journey .journey-socials{ max-width: var(--max-width); margin: 28px auto 0; padding: 0 var(--content-padding); display:flex; gap:14px; flex-wrap:wrap; }
+    #journey .journey-socials a{ background:rgba(14,36,51,.06); border-radius:999px; padding:11px 22px; font-size:14px; font-weight:500; }
+    /* archive */
+    #journey .archive{ max-width: var(--max-width); margin: 56px auto 0; padding: 0 var(--content-padding); }
+    #journey .archive .eyebrow-a{ font-size:12px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--text-muted); margin:0 0 16px; display:block; }
+    #journey .arch-card{ background:#fff; border:1px solid rgba(14,36,51,.1); border-radius:16px; overflow:hidden; display:grid; grid-template-columns: 300px 1fr; }
+    #journey .arch-card .a-thumb{ background:#E0D7CB; }
+    #journey .arch-card .a-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+    #journey .arch-card .a-body{ padding:24px 28px; display:flex; flex-direction:column; justify-content:center; gap:6px; }
+    #journey .arch-card .a-eyebrow{ font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:2px; }
+    #journey .arch-card h3{ font-family:var(--font-display); font-size:22px; font-weight:400; margin:0; color:var(--text-dark); }
+    #journey .arch-card .a-meta{ font-size:14px; color:var(--text-muted); }
+    #journey .arch-card .a-watch{ align-self:flex-start; margin-top:10px; background:rgba(195,154,107,.18); color:#8a6a3f; font-size:14px; font-weight:600; padding:9px 18px; border-radius:999px; }
+    @media (max-width: 900px){
+      #journey .ps-inner{ grid-template-columns:1fr; }
+      #journey .arch-card{ grid-template-columns:1fr; }
+      #journey .arch-card .a-thumb{ aspect-ratio:16/9; }
+      #journey .ph-side{ grid-template-columns:1fr; }
+      #journey .ph-two{ grid-template-columns:1fr; }
+    }
+  </style>
+
+  <!-- Trip title -->
+  <div class="trip-head">
+    <span class="trip-eyebrow">Summer 2026 · The Nordics</span>
+    <h1>The Nordics</h1>
+  </div>
+
+  <!-- Wide mood photo -->
+  <div class="wide-photo">
+    <div class="visual"><img src="/assets/images/nordics-wide.jpg" alt="Cycling the Nordic landscape" loading="lazy"></div>
+    <p class="ph-cap">May in the Norwegian mountains: green below, winter still on top.</p>
+  </div>
+
+  <div style="height:44px;"></div>
+
+  <!-- Infographic (numbers), map removed -->
 <section class="tcn" id="numbers">
   <style>
     .tcn{
@@ -773,9 +845,9 @@
   <!-- petrol hero band -->
   <div class="tcn-band">
     <div class="tcn-band-in">
-      <p class="tcn-eyebrow">Roaming Right · 1 May – 9 August 2026</p>
+      <p class="tcn-eyebrow">Summer 2026 · The Nordics</p>
       <h2 class="tcn-title">The journey in numbers</h2>
-      <p class="tcn-lede">One hundred and one days from the Low Countries to the Arctic and back down to Poland, carried entirely by bike, train and boat. Not a single flight.</p>
+      <p class="tcn-lede">101 days from the lowlands to the Arctic and back down to Poland, completed entirely by bike, train and boat. Zero flights.</p>
       <div class="tcn-heroes">
         <div class="tcn-hero">
           <svg class="tcn-hi" viewBox="0 0 46 46" fill="none" stroke="#C39A6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="31" r="7.5"/><circle cx="34" cy="31" r="7.5"/><path d="M12 31 L19 18 L28 18"/><path d="M19 18 L26 31"/><path d="M34 31 L28 18"/><path d="M23 14 L30 14"/></svg>
@@ -802,9 +874,15 @@
     <div class="tcn-wrap">
       <p class="tcn-modes-h">Total distance travelled&nbsp; <b data-to="10700">0</b>&nbsp;km, over land and sea</p>
       <div class="tcn-bar" role="img" aria-label="Distance by mode: 45% bike, 44% train, 11% boat">
-        <span style="width:45%;background:#C39A6B;"></span>
-        <span style="width:44%;background:#5E8B84;"></span>
-        <span style="width:11%;background:#4E6E8A;"></span>
+        <span style="width:45%;background:#C39A6B;display:flex;align-items:center;justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 46 46" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="31" r="7.5"/><circle cx="34" cy="31" r="7.5"/><path d="M12 31 L19 18 L28 18"/><path d="M19 18 L26 31"/><path d="M34 31 L28 18"/><path d="M23 14 L30 14"/></svg>
+        </span>
+        <span style="width:44%;background:#5E8B84;display:flex;align-items:center;justify-content:center;">
+          <svg width="15" height="15" viewBox="0 0 46 46" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="8" width="22" height="24" rx="5"/><path d="M12 20 L34 20"/><path d="M16 32 L12 38"/><path d="M30 32 L34 38"/></svg>
+        </span>
+        <span style="width:11%;background:#4E6E8A;display:flex;align-items:center;justify-content:center;">
+          <svg width="15" height="15" viewBox="0 0 46 46" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 26 L37 26 L33 34 L13 34 Z"/><path d="M23 26 L23 14"/><path d="M23 15 L31 23 L23 23"/></svg>
+        </span>
       </div>
       <div class="tcn-legend">
         <div class="tcn-leg">
@@ -819,8 +897,8 @@
           <svg width="22" height="22" viewBox="0 0 46 46" fill="none" stroke="#3C5B76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 26 L37 26 L33 34 L13 34 Z"/><path d="M23 26 L23 12"/><path d="M23 13 L31 22 L23 22"/><path d="M7 38 Q11 35 15 38 T23 38 T31 38 T39 38"/></svg>
           Boat <span class="kmv">· ~1,080 km</span>
         </div>
-        <div class="tcn-noflight">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#9C7238" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/><path d="M2.5 2.5 L21.5 21.5" stroke-width="2"/></svg>
+        <div class="tcn-noflight" style="color:#5c6b76;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5c6b76" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/><path d="M2.5 2.5 L21.5 21.5" stroke-width="2"/></svg>
           0 flights
         </div>
       </div>
@@ -830,19 +908,7 @@
         <div class="tcn-clist" id="tcnCountries"></div>
       </div>
 
-      <div class="tcn-map">
-        <div class="tcn-thumb" id="tcnThumb">
-          <img src="/assets/images/polarsteps-route.jpg" alt="The full route plotted on Polarsteps, from Belgium up through Norway and down to Poland">
-        </div>
-        <div class="tcn-mbody">
-          <h3>Every step, plotted on the map</h3>
-          <p>The full route with every camp, ferry and forest track from Belgium to Poland is on Polarsteps.</p>
-          <a href="https://www.polarsteps.com/ThomasElshout/25425010-noorwegen-zweden-en-finland" target="_blank" rel="noopener">
-            See the full route
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 L19 12"/><path d="M13 6 L19 12 L13 18"/></svg>
-          </a>
-        </div>
-      </div>
+</div>
     </div>
   </div>
 
@@ -895,122 +961,103 @@
   </script>
 </section>
 
-  <div class="block-head"> 
-    <span class="hero-eyebrow">Summer 2026 · Latest journey</span> 
-    <h1>Roaming Right</h1> 
-    <p class="hero-deck">A summer spent cycling across the Nordics with a tent, a table and an appetite; here is how it unfolded.</p> 
-  </div>
-  
- <div class="block-body split">
- 
-  <!-- LEFT COLUMN: TEXT -->
-  <div>
-    <span class="hero-eyebrow">Where it started</span>
- 
-    <p class="text">
-      I grew up in the Netherlands, where nature is something you plan in advance and share with a 
-      few million others on the same sunny afternoon. We have bike paths, sure, and plenty of carefully 
-      maintained parks; but finding a spot where you can just sit outside without a reservation, a parking 
-      ticket or someone else's fence in the way has become something of a national talent. Our wishes are 
-      pretty simple: a bit of space, some fresh air and the occasional meal that doesn't come wrapped in 
-      plastic. And yet those basics feel increasingly like a luxury.
-    </p>
- 
-    <p class="text">
-      So when I first read about <i>allemansrätten</i>, the Nordic right to roam, something clicked. In 
-      Norway, Sweden and Finland, you can pitch your tent on someone's land without asking, pick wild berries 
-      straight from the forest and swim in a lake that doesn't belong to anyone in particular. The kind of 
-      outdoor life I'd been chasing as an exception on holidays turned out to be an ordinary Tuesday in 
-      Scandinavia. Not a lifestyle brand, not a retreat you book; just how people live. I wanted to get closer 
-      to that, and food is what made it tangible. What people grow, forage, smoke, ferment and put on the table 
-      is the landscape translated into a meal; and for one summer, that table was mine to pull up a chair to. 
-    </p>
-    
-    <br>
- 
-    <span class="hero-eyebrow">The Traveling Table</span>
- 
-    <p class="text">
-      I carry a small folding table on my bike. I realize that it may sound ridiculous; but the thing is, 
-      it changes everything. A table turns a random patch of grass into a place where something can happen. You 
-      set it down, put a cup of coffee on it and suddenly you're not just passing through anymore; you're 
-      somewhere.
-    </p>
- 
-    <p class="text">
-      At every stop, whatever arrived on the table became the story. A handful of wild blueberries a host 
-      picked that morning. A bowl of salmon soup in a market hall, eaten with bread still warm from the oven. 
-      A rye sourdough bought from a baker at a village market in Latvia, so good my partner and I still talk 
-      about it. Some meals I cooked myself on a camp stove, a few of them badly. Most I stumbled into; sitting 
-      down at someone else's table with the curiosity of a guest and the appetite of someone who'd been 
-      pedalling since breakfast.
-    </p>
- 
-  </div>
- 
-  <!-- RIGHT COLUMN: IMAGE STACK -->
-  <div class="journey-media-stack">
- 
-    <div class="visual">
-      <img src="/assets/images/Downhill_Spain.jpg" alt="Cycling through nature" loading="lazy">
+  <!-- THE STORY -->
+  <div class="story">
+    <span class="hero-eyebrow">The story</span>
+
+    <h3>Where it started: a stranger's garden</h3>
+    <p class="text">For years I'd squeezed these adventures into short holidays, always turning back just when it got interesting. The idea this time was simpler and bigger: follow <i>allemansrätten</i>, the Nordic right to roam, and see against what kind of backdrop my small folding table might find a place. I left with anything but a fixed route.</p>
+    <p class="text">Day one in Norway I slept in a stranger's garden, and it felt like home. The wooden house above Lillehammer belongs to <a class="inline-link" href="https://weleaf.nl/" target="_blank" rel="noopener">Zoë and Olivier</a>, a house I'd only ever seen on Instagram. Their friends Rick and Inge, both in their sixties, welcomed me that first evening; we cooked and ate together, and later they slept outside in their own tent at minus six while I took the pilgrim's hut. After dinner Inge put out a recycled jar of homemade raspberry jam, hand-labelled in felt-tip, exactly the kind my parents set out back home. A thousand kilometres away, I felt completely at home.</p>
+    <p class="text">Zoë and Olivier got back late that night from the hardware store, loaded with wood, and were around all the next day. We worked in the garden together, and Olivier sat down with me over the map; two experienced outdoor locals pointing me the right way. It mattered more than it sounds: half the gravel roads I'd hoped to ride were still closed under May snow, and he helped me trace a route that was both passable and stunning. A perfect day before heading north.</p>
+    <figure class="ph-one"><div class="visual"><img src="/assets/images/story-tretten.jpg" alt="The wooden house above Tretten" loading="lazy"></div><figcaption class="ph-cap">With Zoë and Olivier at the little pilgrim hut next to their house near Lillehammer.</figcaption></figure>
+    <a class="story-link" href="https://open.substack.com/pub/tomcarbon/p/norway-day-one-i-slept-in-a-strangers" target="_blank" rel="noopener">Read the full story on Substack →</a>
+
+    <h3>The highest road</h3>
+    <div class="ph-side">
+      <p class="text">I don't think I've ever felt so alive on the bike as climbing Sognefjellet: the highest mountain pass road in Northern Europe, up to around 1,400 metres. The high peaks surfaced slowly as I rode, each viewpoint an excuse to catch my breath. A full day of sun and around zero degrees, thin traffic, the odd campervan. Reaching the top felt like a victory and of course I had to take the photo with the sign.</p>
+      <figure>
+        <div class="visual"><img src="/assets/images/story-sognefjellet.jpg" alt="Thomas holding up an icicle next to the Sognefjellet summit sign, loaded bike against the railing, snow all around" loading="lazy"></div>
+        <figcaption class="ph-cap">Finally! Sognefjellet, 1,428 metres</figcaption>
+      </figure>
     </div>
- 
-    <div class="visual">
-      <img src="/assets/images/Sunset_bay_Spain.jpg" alt="Camping in nature" loading="lazy">
+    <a class="story-link" href="https://www.polarsteps.com/ThomasElshout/25425010-noorwegen-zweden-en-finland/234597196-lom?referral=true" target="_blank" rel="noopener">See more on Polarsteps →</a>
+
+    <h3>A week of rain, and one Guinness</h3>
+    <p class="text">Then the weather closed in. After the better part of a week of rain and coffee brewed from river water, I rolled into Trondheim and found a camping spot on a hill overlooking the whole city. A flat patch of the greenest grass and no other soul around. That evening, at an Irish pub, a Guinness cost me 17.75 euros. After two weeks of rain and river-water coffee, it tasted like a warm bath.</p>
+    <a class="story-link" href="https://substack.com/@tomcarbon/note/p-201208334?r=1cdaa" target="_blank" rel="noopener">What a Guinness costs after two weeks of rain →</a>
+
+    <h3>Lofoten, without a filter</h3>
+    <p class="text">The ferry spat me out in Moskenes into cold, grey, raw air; Lofoten correcting me for having dressed for summer. The mountains here rise from the ocean like shark teeth, and between them sit the most picturesque villages imaginable. I woke early, packed only coffee and breakfast, left the tent standing and rode straight for Reinebringen before the sun disappeared.</p>
+    <div class="ph-two">
+      <div class="visual"><img src="/assets/images/story-lofoten-1.jpg" alt="Reine: a red boathouse on stilts and fishing boats under a steep grey peak, a cable crossing the sky" loading="lazy"></div>
+      <div class="visual"><img src="/assets/images/story-lofoten-2.jpg" alt="Thomas on top of Reinebringen, the fjord and jagged peaks behind him" loading="lazy"></div>
+      <p class="ph-cap">Reine from the road; and from the top of Reinebringen, eight in the morning.</p>
     </div>
- 
+    <a class="story-link" href="https://substack.com/@tomcarbon/note/p-203131928?r=1cdaa" target="_blank" rel="noopener">Lofoten without a filter →</a>
+
+    <h3>Senja and the high North</h3>
+    <p class="text">On Senja the road ran empty through the middle of the day; the real climb, up Hesten, waits for midnight. I spent a night in a <i>gamme</i>, a traditional turf hut on a storm-battered coast. Outside, a gale; inside the turf walls, not a breath of wind. I woke to dead calm and made coffee in the sun with the fjord doing its thing. Not a bad address.</p>
+    <figure class="ph-one"><div class="visual"><img src="/assets/images/story-senja.jpg" alt="Thomas sitting on a rock on Hesten with a thermos, the midnight sun low behind jagged peaks" loading="lazy"></div><figcaption class="ph-cap">Midnight on Hesten; the sun touches the peaks and comes back up.</figcaption></figure>
+    <a class="story-link" href="https://www.polarsteps.com/ThomasElshout/25425010-noorwegen-zweden-en-finland/245453067-senja?referral=true" target="_blank" rel="noopener">See more on Polarsteps →</a>
+
+    <h3>The Old Post Road</h3>
+    <p class="text">South of Alta the asphalt simply ended in a parking lot and the gravel began rolling into Lapland. Bæskades has connected coast and inland since the Stone Age; in 1798 a royal decree made it the winter postal route between Copenhagen and Alta, the mail carried over the plateau by reindeer sled. One line from the info board stayed with me: two horsemen died up here in a snowstorm, in July. I read all of that while being bitten five times, because the post road belongs to the insects during the summer.</p>
+    <figure class="ph-one"><div class="visual"><img src="/assets/images/story-rakka.jpg" alt="Thomas sitting in front of his tent in a birch wood, wearing a hat with a mosquito net, stove and thermos in the grass" loading="lazy"></div><figcaption class="ph-cap">Dressed for <i>räkkä</i>; the weeks when the North belongs to the mosquitoes.</figcaption></figure>
+    <p class="text">The road was gorgeous in that remote way, kilometres of it over the hills with nothing else in sight. If it weren't raining all the time! The gravel had turned into mud, a swollen creek soaked my socks for good and hungry became hangry; cold hands too cramped to pinch open a bag of nuts. When Stuoroaivi appeared, a lean-to in the middle of the tundra, I lit the Thermacell, the bugs vanished and I pitched the tent inside the shelter. Two days out there I met only one person: a Sami woman with two kids on a quad.</p>
+    <figure class="ph-bleed"><div class="visual"><img src="/assets/images/story-postroad.jpg" alt="The gravel post road running downhill through low birch towards a lake, rain clouds over the hills" loading="lazy"></div><figcaption class="ph-cap">Bæskades with the next shower on its way.</figcaption></figure>
+    <a class="story-link" href="https://www.polarsteps.com/ThomasElshout/25425010-noorwegen-zweden-en-finland/248238758-kautokeino?referral=true" target="_blank" rel="noopener">See more on Polarsteps →</a>
+
+    <h3>Kökar</h3>
+    <div class="ph-side">
+      <p class="text">By the time I reached Kökar, out in the Åland archipelago, the wild cycling had softened into something slower. A Franciscan monastery ruin sits on Hamnö, on a rise above the bare skerries and the sea; the best place I found on the whole trip to simply sit and do nothing. Rock, water, stillness. A turning point before the long way back.</p>
+      <figure>
+        <div class="visual"><img src="/assets/images/story-kokar.jpg" alt="Crossed legs and worn trail shoes in the grass on a rock, the sea glittering beyond the trees" loading="lazy"></div>
+        <figcaption class="ph-cap">Kökar was the perfect invitation to relax on its rocky shore.</figcaption>
+      </figure>
+    </div>
+    <a class="story-link" href="https://www.polarsteps.com/ThomasElshout/25425010-noorwegen-zweden-en-finland/272489575-kokar?referral=true" target="_blank" rel="noopener">See more on Polarsteps →</a>
+
+    <h3>The Baltics, by train and bike, with Aga</h3>
+    <p class="text">From Helsinki I wasn't alone anymore; Aga joined, and we crossed to Tallinn and worked our way south by train and bike through Estonia, Latvia and Lithuania to Poland. Trains that carry your bike, forests full of chanterelles, a rye sourdough from a baker at a village market in Sabile so good we still talk about it. A different rhythm from the solo north and exactly the one the end of a long trip asks for.</p>
+    <div class="ph-two">
+      <div class="visual"><img src="/assets/images/story-baltics-1.jpg" alt="Aga balancing on one leg with her arms out at the edge of the sea at sunset, Thomas pulling a face in the foreground" loading="lazy"></div>
+      <div class="visual"><img src="/assets/images/story-baltics-2.jpg" alt="Thomas and Aga waving in a roadside traffic mirror, their loaded bikes in front of them on a gravel road" loading="lazy"></div>
+      <p class="ph-cap">A different rhythm: Aga on the beach; the two of us somewhere on the way south.</p>
+    </div>
   </div>
- 
-</div>
- 
-  <!-- ROUTE -->
-  <div class="block-head" style="margin-top: 56px;">
-    <span class="hero-eyebrow">The Route</span>
-  </div>
- 
-  <div class="block-body split">
-    <!-- LEFT COLUMN -->
-    <div>
-      <p class="text">
-        The exact route was never fixed, and that turned out to be the strongest part of the plan. I started in 
-        the south, worked my way up through the Norwegian fjords to the Arctic, then let the direction be shaped 
-        by trails, local tips, food culture and the simple question of where it still felt right to sleep in the 
-        open and set up the table. The best days came from taking a turn I hadn't planned; a turf-roofed hut on a 
-        storm-battered coast, a monastery ruin on a near-empty Baltic island, a forest track where two moose 
-        crossed the road in the rain.
-      </p>
- 
-      <p class="text">
-        Was every meal a scenic experience? Of course not. There was rain, there were mosquitoes, and there were 
-        evenings where dinner was instant noodles eaten in a hurry because the wind picked up. But the table never 
-        needed perfect conditions to work; it just needed to be somewhere outside. And in the Nordics, "somewhere 
-        outside" tends to come with a fjord, a forest or a lake you didn't have to pay for. The decor budget was 
-        covered, even on the evenings the rest of the plan fell apart.
-      </p>
-      
-      <div class="button-row">
-        <a href="#numbers" class="cta">
-          The journey in numbers
-        </a>
-        <a href="https://substack.com/@tomcarbon" target="_blank" class="btn-secondary">
-          Read the stories
-        </a>
-        <a href="https://www.instagram.com/tomcarbon_" target="_blank" class="btn-secondary">
-          View the photos
-        </a>
+
+  <!-- Polarsteps banner (moved out of infographic) -->
+  <div class="ps-banner">
+    <div class="ps-inner">
+      <div class="ps-map"><img src="/assets/images/polarsteps-route.jpg" alt="The full route plotted on Polarsteps, from Belgium up through Norway and down to Poland"></div>
+      <div class="ps-body">
+        <h3>Every step, plotted on the map</h3>
+        <p>The full route — every camp, ferry and forest track from Belgium to Poland — lives on Polarsteps.</p>
+        <a href="https://www.polarsteps.com/ThomasElshout/25425010-noorwegen-zweden-en-finland" target="_blank" rel="noopener">See the full route →</a>
       </div>
     </div>
- 
-    <!-- RIGHT COLUMN -->
-    <div class="visual">
-      <img
-        src="assets/images/Roaming_Right.jpg"
-        alt="Nordic route map"
-        loading="lazy"
-      >
+  </div>
+
+  <!-- Social links -->
+  <div class="journey-socials">
+    <a href="https://substack.com/@tomcarbon" target="_blank" rel="noopener">Read the stories on Substack</a>
+    <a href="https://www.instagram.com/tomcarbon_" target="_blank" rel="noopener">See the photos on Instagram</a>
+  </div>
+
+  <!-- Archive -->
+  <div class="archive">
+    <span class="eyebrow-a">More journeys</span>
+    <div class="arch-card">
+      <div class="a-thumb"><img src="/assets/images/basque-still.jpg" alt="Cycling the Basque Country" loading="lazy"></div>
+      <div class="a-body">
+        <span class="a-eyebrow">Summer 2024 · The Basque Country</span>
+        <h3>Mountains, pintxos and a coastal descent</h3>
+        <span class="a-meta">A ride through the Spanish Basque Country with my partner.</span>
+        <a class="a-watch" href="https://www.youtube.com/watch?v=K-i5zijKBN4" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+      </div>
     </div>
   </div>
- 
+
 </section>
 
 <!-- =================================================================
