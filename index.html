@@ -714,15 +714,16 @@
     #journey .ph-one .visual{ aspect-ratio: 16/9; border-radius: 16px; }
     #journey .ph-two{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0 8px; }
     #journey .ph-two .visual{ aspect-ratio: 4/5; border-radius: 16px; }
-    #journey .ph-side{ display:grid; grid-template-columns: 1fr 0.9fr; gap:28px; align-items:center; margin:22px 0 8px; }
+    #journey .ph-side{ display:grid; grid-template-columns: 1fr 0.9fr; gap:28px; align-items:start; margin:22px 0 8px; }
     #journey .ph-side .visual{ aspect-ratio: 3/4; border-radius: 16px; }
+    #journey .ph-side.tall .visual{ aspect-ratio: 2/3; }
     /* captions under photo blocks */
     #journey figure{ margin:0; }
     #journey .ph-cap{ font-family: var(--font-body); font-size:13px; line-height:1.5; color: var(--text-muted); margin:10px 2px 0; }
     #journey .ph-two .ph-cap{ grid-column: 1 / -1; margin-top:-6px; }
     #journey .ph-side .text{ margin:0; }
     /* full-bleed photo breaks out of the 780px column */
-    #journey .ph-bleed{ max-width: var(--max-width); margin: 28px auto; padding: 0 var(--content-padding); }
+    #journey .ph-bleed{ width: min(var(--max-width), calc(100vw - 2 * var(--content-padding))); max-width: none; margin: 28px 0 28px 50%; transform: translateX(-50%); padding: 0; }
     #journey .ph-bleed .visual{ aspect-ratio: 21/8; border-radius: var(--radius-lg); }
     /* Polarsteps banner */
     #journey .ps-banner{ max-width: var(--max-width); margin: 40px auto 0; padding: 0 var(--content-padding); }
@@ -987,12 +988,19 @@
     <a class="story-link" href="https://substack.com/@tomcarbon/note/p-201208334?r=1cdaa" target="_blank" rel="noopener">What a Guinness costs after two weeks of rain →</a>
 
     <h3>Lofoten, without a filter</h3>
-    <p class="text">The ferry spat me out in Moskenes into cold, grey, raw air; Lofoten correcting me for having dressed for summer. The mountains here rise from the ocean like shark teeth, and between them sit the most picturesque villages imaginable. I woke early, packed only coffee and breakfast, left the tent standing and rode straight for Reinebringen before the sun disappeared.</p>
+    <div class="ph-side tall">
+      <p class="text">The ferry spat me out in Moskenes into cold, grey, raw air; Lofoten correcting me for having dressed for summer. The mountains here rise from the ocean like shark teeth, and between them sit the most picturesque villages imaginable. I woke early, packed only coffee and breakfast, left the tent standing and rode straight for Reinebringen before the sun disappeared.</p>
+      <figure>
+        <div class="visual"><img src="/assets/images/story-lofoten-table.jpg" alt="A pan of prawn curry on a small folding table in the grass, a sunlit mountain across the water" loading="lazy"></div>
+        <figcaption class="ph-cap">Dinner that same evening: prawn curry, a folding table and a mountain catching the sun.</figcaption>
+      </figure>
+    </div>
     <div class="ph-two">
       <div class="visual"><img src="/assets/images/story-lofoten-1.jpg" alt="Reine: a red boathouse on stilts and fishing boats under a steep grey peak, a cable crossing the sky" loading="lazy"></div>
       <div class="visual"><img src="/assets/images/story-lofoten-2.jpg" alt="Thomas on top of Reinebringen, the fjord and jagged peaks behind him" loading="lazy"></div>
       <p class="ph-cap">Reine from the road; and from the top of Reinebringen, eight in the morning.</p>
     </div>
+    <figure class="ph-bleed"><div class="visual"><img src="/assets/images/story-lofoten-tent.jpg" alt="Tent, camp chair and bike in the dandelions above a white beach, turquoise water and mountains behind" loading="lazy"></div><figcaption class="ph-cap">Morning at Haukland beach; the tent door facing the right way.</figcaption></figure>
     <a class="story-link" href="https://substack.com/@tomcarbon/note/p-203131928?r=1cdaa" target="_blank" rel="noopener">Lofoten without a filter →</a>
 
     <h3>Senja and the high North</h3>
